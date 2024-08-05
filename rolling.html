@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Rolling Text</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+   
+    .scrolling-text-container {
+        background-color: #ffffff;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    
+    .scrolling-text-inner {
+        display: flex;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 200;
+        padding: 8px 0;
+    }
+
+    
+    .scrolling-text-item {
+        padding: 0 30px;
+        flex-shrink: 0; 
+    }
+
+    
+    .scrolling-text-item {
+        animation: scroll-left 3s linear infinite;
+    }
+
+    
+    .scrolling-text-container:hover .scrolling-text-item {
+        animation-play-state: paused;
+    }
+
+    .fa-regular {
+        color: #f66136;
+    }
+
+    
+    @keyframes scroll-left {
+       
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="scrolling-text-container">
+        <div class="scrolling-text-inner">
+            
+            <div class="scrolling-text-item">Boost your brand online effectively</div>
+            <div class="scrolling-text-item">Boost your brand online effectively</div>
+            <div class="scrolling-text-item">Boost your brand online effectively</div>
+            <div class="scrolling-text-item">Boost your brand online effectively</div>
+            <div class="scrolling-text-item">Boost your brand online effectively</div>
+        </div>
+    </div>
+</body>
+</html>
